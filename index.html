@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>     
+<body id="body">
+
+    <main>
+        <input id="myInput" type="text" class="search" />
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+
+
+      <!-- <form autocomplete="off" action="javascript:void(0);">
+            <div class="autocomplete" style="width:300px;">
+              <input id="myInput" type="text" name="myCountry" placeholder="Type City ...">
+            </div>
+            <input type="submit" value="submit" id="">
+          </form> -->
+
+        
+
+    </main>
+
+    <div id="results">
+
+  <div id="popu" class="row bg-secondary">
+    <p id="cityname"></p>
+             <p id="day"></p>
+             <p id="date"></p>
+             <p id="status"></p> <p id="temp"></p>
+             </div> 
+
+    </div>
+
+    <div class="population-wrapper">
+        <p id="population"></p>
+    </div>
+
+
+
+
+<script>
+$(document).ready(function() {
+		$('.search').click(function() {
+				$('.search').addClass('active');
+				$('.line-1').css({
+						'transform': 'rotate(45deg)',
+						'top': '0px',
+						'left': '0px'
+				});
+				$('.line-2').css({
+						'height':'40px',
+						'opacity':'1'
+				});
+		});
+		$('.line-1, .line-2').click(function() {
+				$('.search').removeClass('active').val('');
+				$('.line-1').css({
+						'transform': 'rotate(-45deg)',
+						'top': '-20px',
+						'left': '45px'
+				});
+				$('.line-2').css({
+						'height':'0px',
+						'opacity':'0'
+				});
+
+		});
+});
+</script>
+
+
+<script src="app.js"></script>
+<script src="autocomplete.js"></script>
+
+</body>
+</html>
