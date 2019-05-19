@@ -39,7 +39,6 @@ function myFunction(e){
         }
         
 
-        // var newdate = concat(date + month);
 
         console.log(dv.getMonth());
        
